@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; manifest-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#002457">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Officina">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+<title>Officina Documenti</title>
+</head>
+<body>
+<header class="bar" id="bar">
+  <button class="back" id="back" aria-label="Indietro" hidden>
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <div class="bar-title" id="barTitle">
+    <img src="icons/icon-192.png" alt="" class="bar-logo" id="barLogo">
+    <span id="barText">Officina Documenti</span>
+  </div>
+  <button class="bar-help" id="help" aria-label="Guida">?</button>
+</header>
+<main id="app"></main>
+<div class="actionbar" id="actionbar" hidden></div>
+
+<div class="sheet-back" id="sheetBack" hidden>
+  <div class="sheet" role="dialog" aria-modal="true">
+    <div class="sheet-grip"></div>
+    <div class="sheet-head"><h3 id="sheetTitle"></h3><button class="x" id="sheetClose" aria-label="Chiudi">&times;</button></div>
+    <div class="sheet-body" id="sheetBody"></div>
+    <div class="sheet-foot" id="sheetFoot"></div>
+  </div>
+</div>
+<div class="busy" id="busy" hidden>
+  <div class="busy-card">
+    <div class="spinner"></div>
+    <div class="busy-msg" id="busyMsg">Elaborazione…</div>
+    <div class="bar-track"><i id="busyBar"></i></div>
+    <div class="busy-note">Tieni l'app aperta: tutto avviene sul telefono.</div>
+  </div>
+</div>
+<div class="toasts" id="toasts"></div>
+
+<script src="config.js"></script>
+<script src="libs/pdf-lib.min.js"></script>
+<script src="libs/jszip.min.js"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

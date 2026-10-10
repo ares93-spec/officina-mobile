@@ -1,0 +1,4 @@
+Librerie open source incluse in Officina Documenti mobile
+- pdf-lib (fork @cantoo/pdf-lib) - licenza MIT - https://github.com/cantoo-scribe/pdf-lib
+- pdf.js (Mozilla) - licenza Apache 2.0 - https://github.com/mozilla/pdf.js
+- JSZip - licenza MIT (o GPLv3, a scelta) - https://github.com/Stuk/jszip
